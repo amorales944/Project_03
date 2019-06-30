@@ -6,7 +6,7 @@ A site for employers and employees to login into to view, add and edit their wor
 
 # Developers
 James: Back-end Developer
-- [Github]()
+- [Github](https://github.com/jonyung1205)
 - [LinkedIn]()
 - [Profile]()
 
