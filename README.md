@@ -1,11 +1,5 @@
-# Project_03
-Project_03 - James, Colton and Armando
-
-
-
-
 # Project_03 - Live Site link: 
-[OnTime](https://project3app.herokuapp.com/)
+[OnTime](https://young-coast-74653.herokuapp.com/)
 
 # Project Summary
 A site for employers and employees to login into to view, add and edit their work schedule. Employers will have the ability to approve shift changes, add or delete shifts and add or delete employees. Employees will also have the ability to clock in and out during the shift hours and keep track of their hours.
