@@ -2,13 +2,13 @@
 [Chess APP](https://young-coast-74653.herokuapp.com/)
 
 # Project Summary
-A site for employers and employees to login into to view, add and edit their work schedule. Employers will have the ability to approve shift changes, add or delete shifts and add or delete employees. Employees will also have the ability to clock in and out during the shift hours and keep track of their hours.
+Build a chess game that keeps users progress and remembers the users last moves and makes those plays in order to push the palyer to better his/hers game the more they play.
 
 # Developers
-James: Back-end Developer
+James Onyoung: Back-end Developer
 - [Github](https://github.com/jonyung1205)
 - [LinkedIn]()
-- [Profile]()
+- [Profile](https://jonyung1205.github.io/james-portfolio-page/)
 
 Colton Porto: Front-end/Logic Developer  
 - [Github](https://github.com/csporto23)
