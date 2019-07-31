@@ -1,8 +1,4 @@
 import React from 'react';
-
-
-
-
 //Home Page layout here
 
 
@@ -29,6 +25,6 @@ import React from 'react';
 
 
 
-//exports
 
+//exports
 export default HomePage;
