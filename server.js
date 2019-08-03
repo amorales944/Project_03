@@ -14,7 +14,7 @@ app.use(express.json());
 
 
 app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./chess/public/index.html"));
+    res.sendFile(path.join(__dirname, "./chessai/src/App.js"));
   });
 
 // app.use(express.static("public"));
