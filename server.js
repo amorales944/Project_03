@@ -4,17 +4,16 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 
-
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("chess/public"));
-  }
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("./chessai/build"));
+  }
+
 
 app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./chessai/src/App.js"));
+    res.status(200).sendFile(path.join(__dirname, "./chessai/build/index.html"));
   });
 
 // app.use(express.static("public"));
