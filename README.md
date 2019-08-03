@@ -1,5 +1,5 @@
 # Project_03 - Live Site link: 
-[Chess APP](https://young-coast-74653.herokuapp.com/)
+[Chess APP](https://shrouded-hamlet-77998.herokuapp.com/)
 
 # Project Summary
 Build a chess game that keeps users progress and remembers the users last moves and makes those plays in order to push the palyer to better his/hers game the more they play.
@@ -7,7 +7,7 @@ Build a chess game that keeps users progress and remembers the users last moves 
 # Developers
 James Onyoung: Front-end Developer
 - [Github](https://github.com/jonyung1205)
-- [LinkedIn]()
+- [LinkedIn](https://www.linkedin.com/in/jamesonyung/)
 - [Profile](https://jonyung1205.github.io/james-portfolio-page/)
 
 Colton Porto: Front-end/Back-end Developer  
