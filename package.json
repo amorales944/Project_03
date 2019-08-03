@@ -7,7 +7,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'chessai/*'\" \"npm run chessai\"",
-    "chess": "cd chessai && npm run start",
+    "chessai": "cd chessai && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd chessai && npm install",
     "build": "cd chessai && npm run build",
