@@ -30,9 +30,11 @@ class Demo extends React.PureComponent {
   render() {
     const {pieces} = this.state
     return (
-      <div className="container demo">
-        <Chess className="chess" pieces={pieces} onMovePiece={this.handleMovePiece} />
-      </div>
+      <div className="mt-5 demo">
+        <div className="row justify-content-center">
+          <div className="col-5"><Chess className="chess" pieces={pieces} onMovePiece={this.handleMovePiece} /></div>
+          </div>
+          </div>
     )
   }
 }

@@ -11,7 +11,16 @@ function Homebody() {
       </Link>
             <Link to="/Multiplayer"><button id="button2">Multiplayer</button>
       </Link>
+
+      <div className="row">
+        <div className="col"></div>
+        <div className="col"><Link to="/Signin"><button id="button2">Sign In</button>
+      </Link></div>
+        <div className="col"></div>
+      </div>
     </div>
+
+
           
 
   )
