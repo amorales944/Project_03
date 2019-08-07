@@ -4,6 +4,7 @@ import Multiplayer from "./pages/Multiplayer";
 import Homepage from "./pages/Homepage";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import Singleplayer from "./pages/Singleplayer"
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/Homepage" component={Homepage} />
           <Route exact path="/Multiplayer" component={Multiplayer} />
+          <Route exact path="/Singleplayer" component={Singleplayer} />
+          
         </Wrapper>
         <Footer />
       </div>
