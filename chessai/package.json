@@ -15,7 +15,6 @@
     "build": "npm run clean && npm run compile && NODE_ENV=production webpack -p && react-scripts build",
     "clean": "rimraf build/ lib/ coverage/ umd/*.js",
     "compile": "babel --copy-files -d lib/ src/",
-    "deploy": "gh-pages-deploy",
     "posttest": "eslint .",
     "prepublishOnly": "npm run qa",
     "qa": "npm test && npm run build",
@@ -26,18 +25,11 @@
     "type": "git",
     "url": "git@github.com:rexxars/react-chess.git"
   },
-  "homepage": "https://rexxars.github.io/react-chess/",
   "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
   "license": "MIT",
-  "gh-pages-deploy": {
-    "noprompt": true,
-    "prep": [
-      "build"
-    ],
-    "staticpath": "build"
-  },
   "dependencies": {
     "axios": "^0.19.0",
+    "node": "^12.7.0",
     "prop-types": "^15.6.0",
     "react-draggable": "^3.0.3",
     "react-resize-aware": "^2.7.0",
