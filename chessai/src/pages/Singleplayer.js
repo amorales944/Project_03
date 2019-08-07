@@ -3,7 +3,7 @@ import Demo from "../components/demo/demo";
 
 
 
-class Multiplayer extends Component {
+class Singleplayer extends Component {
 
 
   render() {
@@ -15,4 +15,4 @@ class Multiplayer extends Component {
   }
 }
 
-export default Multiplayer;
+export default Singleplayer;
