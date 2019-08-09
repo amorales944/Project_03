@@ -10,10 +10,6 @@
     "heroku:add": "heroku git:remote -a",
     "deploy:heroku": "git subtree push --prefix server heroku master"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amazingandyyy/mern.git"
-  },
   "keywords": [
     "react"
   ],
