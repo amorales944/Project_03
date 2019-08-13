@@ -1,5 +1,5 @@
 const redis = require('redis');
-const redisClient = redis.createClient('//rediscloud:a2jAMHTJTS99VAlm1mU6UW6qxZdOBBx1@redis-13888.c89.us-east-1-3.ec2.cloud.redislabs.com:13888');
+const redisClient = redis.createClient('//rediscloud:hEicXi8OlvgZOAkYHGYhchvIKViEEvTI@redis-13888.c89.us-east-1-3.ec2.cloud.redislabs.com:13888');
 const schedule = require('node-schedule');
 
 redisClient.on('error', function (err) {

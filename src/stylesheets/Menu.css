@@ -5,7 +5,8 @@
   width: 200px;
   height: 100vh;
   padding: 10px;
-  background-color: #00152A;
+  margin-left: 200px;
+  
 }
 
 .menu--header {
@@ -14,12 +15,13 @@
 }
 
 .menu--header-room-text {
-  color: #1890ff;
+  color: crimson;
   margin-right: 5px;
+  margin-top: 320px;
 }
 
 .menu--header-room-id {
-  color: #f5222d;
+  color: black;
   border-radius: 5px;
   background-color: #fff;
   display: inline-block;
