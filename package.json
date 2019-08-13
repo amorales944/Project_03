@@ -1,0 +1,31 @@
+{
+  "name": "project_03",
+  "version": "1.0.0",
+  "description": "[Chess APP](https://shrouded-hamlet-77998.herokuapp.com/)",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run chess\"",
+    "client": "cd chess && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd chess && npm install",
+    "build": "cd chess && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amorales944/Project_03.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amorales944/Project_03/issues"
+  },
+  "homepage": "https://github.com/amorales944/Project_03#readme"
+}

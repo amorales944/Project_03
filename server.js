@@ -2,18 +2,18 @@ const express = require("express");
 const path = require("path");
 const app = express();
 require("dotenv").config();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("./chessai/build"));
+    app.use(express.static("./chess/build"));
   }
 
 
 app.get("*", function(req, res) {
-    res.status(200).sendFile(path.join(__dirname, "./chessai/build/index.html"));
+    res.status(200).sendFile(path.join(__dirname, "./chess/build/index.html"));
   });
 
 // app.use(express.static("public"));

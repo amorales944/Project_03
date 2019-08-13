@@ -1,12 +1,12 @@
-import socketIo from 'socket.io';
-import { Chess } from '../../src/lib/chess';
-import YellowSubsAction from '../../src/lib/yellowsub.ai';
-import { keys, hset, hdel, del, hkeys } from '../redis';
-import { generate } from 'shortid';
+const socketIo = require('socket.io');
+const Chess = require('../../src/lib/chess').Chess;
+const YellowSubsAction = require('../../src/lib/yellowsub.ai');
+const redisClient = require('../redis');
+const shortid = require('shortid');
 
 const game = new Chess();
 
-export default (server) => {
+module.exports = (server) => {
   const io = socketIo(server);
   io.on('connect', (socket) => {
     console.log('new user connected on socketId', socket.id); 
@@ -19,7 +19,7 @@ export default (server) => {
       }
     };
 
-    keys('*', (err, roomList) => {
+    redisClient.keys('*', (err, roomList) => {
       console.log('rooms listing', roomList)
       if (err) return console.log(err);
     });
@@ -29,12 +29,12 @@ export default (server) => {
     socket.on('user-channel', (userInfo) => {
       userName = userInfo.userName;
       if (userInfo.roomId === '') {
-        roomId = generate();
+        roomId = shortid.generate();
       } else {
         roomId = userInfo.roomId;
       }
       socket.join(roomId);
-      hset(roomId, userInfo.userName, socket.id);
+      redisClient.hset(roomId, userInfo.userName, socket.id);
       const emitNewUser = (roomUsers) => {
         emitter(roomId, 'user-channel', {
           userName,
@@ -97,9 +97,9 @@ export default (server) => {
         if (err) {
           console.log('Error when disconnect', err);
         }
-        hdel(roomId, userName, () => {
+        redisClient.hdel(roomId, userName, () => {
           if (clients.length === 0) {
-            del(roomId);
+            redisClient.del(roomId);
           }
           getUsersCount(roomId, onDisconnect);
         });
@@ -116,7 +116,7 @@ export default (server) => {
 }
 
 const getUsersCount = (hashKey, callback) => {
-  hkeys(hashKey, (err, userCount) => {
+  redisClient.hkeys(hashKey, (err, userCount) => {
     console.log(`usercount on ${hashKey}`, userCount)
     if (err) return console.log(err);
     if (callback) {

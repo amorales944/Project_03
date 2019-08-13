@@ -5,7 +5,7 @@ import '@Multiplayer/stylesheets/ChessFooter.css';
 const RadioGroup = Radio.Group;
 
 interface ChessFooterProps {
-  gameType: 'friends' | 'ai';
+  gameType: 'friends' ;
   setOrientation: (side: 'w' | 'b') => void;
   resetGame: () => void;
   onGameTypeSelected: (e: RadioChangeEvent) => void;
@@ -19,7 +19,6 @@ const ChessFooter = (props: ChessFooterProps) => {
       <Button onClick={() => props.setOrientation('b')}>Black</Button>
       <RadioGroup onChange={e => props.onGameTypeSelected(e)} value={props.gameType}>
         <Radio value={'friends'}>Vs. Friends</Radio>
-        <Radio value={'ai'}>Vs. AI</Radio>
       </RadioGroup>
     </div>
   );
