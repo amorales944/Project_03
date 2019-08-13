@@ -37,7 +37,7 @@ class Online extends React.Component<AppProps, AppState> {
       currentUser: '',
       messagesArray: [],
       gameStatus: {
-        message: 'Welcome to React Chess. Please press Start New Game to begin.',
+        message: 'Welcome to CheckMates. Start New Game',
         type: 'info',
         showIcon: false
       }

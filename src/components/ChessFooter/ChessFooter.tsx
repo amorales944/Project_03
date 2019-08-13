@@ -16,7 +16,7 @@ const ChessFooter = (props: ChessFooterProps) => {
     <div className="chessfooter-wrapper">
       <Button type="primary" onClick={props.resetGame}>Start New Game</Button>
       <Button onClick={() => props.setOrientation('w')}>White</Button>
-      <Button onClick={() => props.setOrientation('b')}>Black</Button>
+      <Button className="bg-secondary text-white" onClick={() => props.setOrientation('b')}>Black</Button>
       <RadioGroup onChange={e => props.onGameTypeSelected(e)} value={props.gameType}>
         <Radio value={'friends'}>Vs. Friends</Radio>
       </RadioGroup>
