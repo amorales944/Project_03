@@ -1,14 +1,14 @@
-import express, { static } from 'express';
-import { urlencoded, json } from 'body-parser';
-import { resolve } from 'path';
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 require('dotenv').load();
 
 const app = express();
 
-app.use(urlencoded({ extended: true }));
-app.use(json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.use(static(resolve(__dirname, '..', 'build')));
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -16,4 +16,4 @@ app.use((req, res, next) => {
   next();
 });
 
-export default app;
+module.exports = app;

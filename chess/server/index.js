@@ -1,6 +1,6 @@
-import app from './app';
+const app = require('./app');
 const server = require('http').createServer(app);
-require('./socketIo').default(server);
+require('./socketIo')(server);
 
 const PORT = process.env.PORT || 3001;
 
